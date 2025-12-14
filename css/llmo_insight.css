@@ -1,0 +1,561 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   LLMO Insight Styles - Bold Editorial Tech
+   ========================================================================== */
+
+/* 1. Hero: Horizontal Bold Layout */
+.llmo-hero {
+    padding-top: calc(var(--header-height) + 6rem);
+    padding-bottom: 6rem;
+    position: relative;
+    border-bottom: 1px solid var(--color-miraina-black);
+    background-color: var(--color-white);
+}
+
+.hero-inner-horizontal {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-tag-horizontal {
+    display: inline-block;
+    background-color: var(--color-intellect-blue);
+    color: var(--color-white);
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.hero-title-horizontal {
+    font-size: 4rem;
+    /* Mobile Size */
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+    .hero-title-horizontal {
+        font-size: 7rem;
+        /* Big Desktop Size */
+    }
+}
+
+.hero-subtitle-horizontal {
+    font-size: 1.5rem;
+    font-family: var(--font-gothic);
+    font-weight: normal;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .hero-subtitle-horizontal {
+        font-size: 2rem;
+    }
+}
+
+.hero-desc-horizontal {
+    font-size: 1rem;
+    color: var(--color-text-gray);
+    margin-bottom: 3rem;
+    line-height: 2;
+}
+
+.hero-cta-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (min-width: 480px) {
+    .hero-cta-horizontal {
+        flex-direction: row;
+        width: auto;
+        max-width: none;
+        gap: 1.5rem;
+    }
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--color-miraina-black);
+    color: var(--color-miraina-black);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+}
+
+/* 2. Problems */
+.section-heading {
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--color-miraina-black);
+}
+
+.section-lead {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+    font-family: var(--font-mincho);
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .problem-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.problem-card {
+    background-color: var(--color-paper-gray);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.problem-title {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--color-miraina-black);
+}
+
+.problem-text {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+.problem-statement {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.problem-statement p {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    background: linear-gradient(transparent 60%, rgba(0, 82, 204, 0.2) 60%);
+    font-weight: bold;
+}
+
+.problem-detail {
+    font-size: 1rem !important;
+    color: var(--color-text-gray);
+}
+
+.problem-punch {
+    font-family: var(--font-mincho);
+    font-size: 1.5rem !important;
+    margin-top: 3rem;
+}
+
+/* 3. Logic (Dark Section) */
+.bg-dark {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+}
+
+.logic-block {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logic-q {
+    font-size: 1.75rem;
+    font-family: var(--font-mincho);
+    color: var(--color-white);
+    /* override base */
+    margin-bottom: 2rem;
+}
+
+.logic-a {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+}
+
+.logic-text {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+    color: #ccc;
+}
+
+.logic-idea {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.logic-punchline {
+    font-size: 2.5rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    color: var(--color-white);
+    /* override base */
+}
+
+/* 4. Tech */
+.tech-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.tech-points-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .tech-points-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tech-point {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tech-point h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.tech-point p {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+}
+
+/* 5. Details */
+.bg-gray {
+    background-color: #fafafa;
+}
+
+.service-detail-block {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.detail-main-title {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mincho);
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.detail-sub {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--color-text-gray);
+}
+
+.detail-features {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.detail-feature-item {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-left: 5px solid var(--color-intellect-blue);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.detail-feature-item h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.detail-feature-item ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.detail-feature-item li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* 6. Benefits */
+.benefits-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    line-height: 2;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.benefit-card {
+    padding: 2.5rem;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-intellect-blue);
+}
+
+.benefit-card h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+/* 7. Flow (Timeline Reuse) */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    /* Removed border-left from container */
+    /* Removed padding-left from container, moved to item */
+}
+
+.timeline-item {
+    margin-bottom: 0;
+    /* Remove margin to ensure continuous line if content touches */
+    padding-bottom: 3rem;
+    /* Use padding for spacing instead */
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--color-miraina-black);
+    /* Line belongs to item now */
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+    border-left: 2px solid transparent;
+    /* Hide line for last item */
+}
+
+.timeline-marker {
+    position: absolute;
+    /* Adjust left to center on the item's border */
+    /* Border is at left: 0 of content-box? No, border is border-left */
+    /* Center of border is -1px. Marker width 32. Center 16. Left should be -17px */
+    left: -17px;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 1;
+    /* Ensure marker sits on top of line */
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    /* Better alignment with marker */
+    margin-top: -0.2rem;
+    /* Visually align text top with marker */
+}
+
+.timeline-content p {
+    color: var(--color-text-gray);
+}
+
+/* 8. Pricing Table (Plans) */
+.plan-table-wrapper {
+    overflow-x: auto;
+}
+
+.plan-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--color-white);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.plan-table th,
+.plan-table td {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    text-align: center;
+    vertical-align: top;
+}
+
+.plan-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.plan-table .highlight-th {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+}
+
+.plan-table td {
+    font-size: 1rem;
+}
+
+.tax-text {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.plan-content {
+    text-align: left;
+}
+
+.plan-list {
+    list-style: none;
+    /* override user agent */
+    padding-left: 0;
+}
+
+.plan-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.plan-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--color-intellect-blue);
+    font-weight: bold;
+}
+
+/* 9. FAQ (Clean) */
+.faq-clean-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-clean-item {
+    margin-bottom: 2rem;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.faq-q::before {
+    content: 'Q.';
+    margin-right: 0.5rem;
+    color: var(--color-miraina-black);
+}
+
+.faq-a {
+    padding-left: 1.5rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+/* 10. Large CTA */
+.section-cta-large {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.cta-head {
+    font-size: 2.5rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.cta-sub {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-gray);
+    line-height: 2;
+}
+
+.btn-black-fill {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border: none;
+    padding: 1.5rem 4rem;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-black-fill:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}

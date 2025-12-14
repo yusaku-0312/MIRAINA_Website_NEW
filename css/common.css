@@ -528,7 +528,70 @@ img {
     font-weight: bold;
 }
 
-.faq-answer {
-    padding-left: 2rem;
-    color: var(--color-text-gray);
+
+/* Definition List (Company Overview etc.) */
+.dl-horizontal {
+    border-top: 1px solid #ddd;
+}
+
+.dl-horizontal dt,
+.dl-horizontal dd {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.dl-horizontal dt {
+    font-weight: bold;
+    font-family: var(--font-mincho);
+}
+
+.dl-horizontal dd {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    .dl-horizontal {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        align-items: baseline;
+        /* Align text baselines */
+    }
+
+    .dl-horizontal dt,
+    .dl-horizontal dd {
+        border-bottom: 1px solid #ddd;
+        border-top: none;
+        /* Handled by grid container or previous item bottom */
+    }
+
+    /* Since grid items are separate elements, borders need care.
+       Actually, standard flex row per item group is easier for borders.
+       Let's stick to a simple flex/grid row approach per DL definition if structure allows,
+       or just basic grid placement.
+       
+       Better approach for standard DL:
+    */
+    .dl-horizontal {
+        display: block;
+        /* reset grid */
+    }
+
+    .dl-row {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .dl-row dt {
+        width: 200px;
+        font-weight: bold;
+        padding: 1.5rem 0;
+        border-bottom: none;
+        flex-shrink: 0;
+    }
+
+    .dl-row dd {
+        flex: 1;
+        padding: 1.5rem 0;
+        border-bottom: none;
+    }
 }

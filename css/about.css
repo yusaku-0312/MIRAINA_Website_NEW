@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Vision & Mission
+   ========================================================================== */
+.vision-header {
+    display: inline-block;
+    border-bottom: 1px solid var(--color-miraina-black);
+    padding-bottom: 0.5rem;
+}
+
+.eng-heading {
+    text-transform: uppercase;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-gray);
+}
+
+.vision-title,
+.mission-title {
+    font-size: var(--font-size-2xl);
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+
+    .vision-title,
+    .mission-title {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+.vision-desc,
+.mission-desc {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--font-size-lg);
+    line-height: 2;
+}
+
+.section-vision,
+.section-mission {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+}
+
+/* ==========================================================================
+   2. Values
+   ========================================================================== */
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.value-card {
+    background-color: var(--color-white);
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle border for structure */
+    transition: transform var(--transition-normal);
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.value-card-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: 0.5rem;
+    color: var(--color-intellect-blue);
+    font-weight: bold;
+}
+
+.value-card-sub {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--color-miraina-black);
+}
+
+.value-card-list {
+    list-style: none;
+    /* Custom bullets */
+}
+
+.value-card-list li {
+    font-size: var(--font-size-base);
+    color: var(--color-text-gray);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.value-card-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* ==========================================================================
+   3. CEO Message
+   ========================================================================== */
+.bg-paper {
+    background-color: #fff;
+    /* Flip background context if body is gray */
+}
+
+/* Wait, body is #f4f4f4 (paper-gray). So bg-paper here probably means WHITE to look like a sheet of paper on a desk?
+   Or if the body is paper, then sections can be white.
+   Let's assume standard sections are transparent (paper gray) and some are white cards.
+   Design-wise:
+   Section Vision: Transparent (Gray)
+   Section Mission: White
+   Section Values: Transparent (Gray) Cards are White.
+   Section Message: White
+*/
+.section-mission {
+    background-color: var(--color-white);
+}
+
+.section-message {
+    background-color: var(--color-white);
+}
+
+.message-layout {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-body p {
+    margin-bottom: 1.5rem;
+    font-size: var(--font-size-base);
+    line-height: 2;
+    color: var(--color-text-gray);
+}
+
+/* ==========================================================================
+   4. Company Overview
+   ========================================================================== */
+.section-overview .dl-horizontal {
+    max-width: 800px;
+    margin: 0 auto;
+}

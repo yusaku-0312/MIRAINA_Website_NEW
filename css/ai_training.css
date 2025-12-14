@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   AI Training Page Styles - Bold Editorial
+   ========================================================================== */
+
+/* Reuse Hero Variables or Common patterns as base */
+/* (We are writing a standalone file, so we define what we need, maintaining consistency) */
+
+/* 1. Hero: Split Layout & Vertical Text */
+.training-hero {
+    padding-top: calc(var(--header-height) + 4rem);
+    padding-bottom: var(--space-8);
+    position: relative;
+    border-bottom: 1px solid var(--color-miraina-black);
+}
+
+.hero-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+@media (min-width: 960px) {
+    .hero-layout {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        min-height: 50vh;
+    }
+}
+
+.hero-left {
+    flex: 0 0 auto;
+}
+
+.vertical-title-container {
+    border-left: 5px solid var(--color-miraina-black);
+    padding-left: 2rem;
+    height: 100%;
+}
+
+.vertical-title {
+    font-size: 3rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    writing-mode: horizontal-tb;
+}
+
+@media (min-width: 960px) {
+    .vertical-title {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        height: 350px;
+        font-size: 5rem;
+    }
+}
+
+.hero-right {
+    flex: 1;
+    max-width: 600px;
+    padding-top: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--color-text-gray);
+    margin-bottom: 3rem;
+}
+
+.hero-cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+
+/* 2. Service Content (Grid) */
+.section-heading {
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: inline-block;
+    border-bottom: 2px solid var(--color-miraina-black);
+}
+
+.section-lead {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 4rem;
+    font-family: var(--font-mincho);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.content-card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2.5rem;
+    background-color: var(--color-white);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-card:hover {
+    border-color: var(--color-miraina-black);
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.05);
+    /* Editorial offset shadow */
+    transform: translateY(-5px);
+}
+
+.content-card-num {
+    font-size: 2rem;
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.content-card-title {
+    font-size: 1.5rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.content-card-text {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+/* 3. Features (List Style) */
+.feature-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .feature-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.feature-item {
+    background-color: var(--color-paper-gray);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.feature-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--color-miraina-black);
+    font-weight: bold;
+}
+
+.feature-item h3 {
+    font-size: 1.1rem;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+
+/* 4. Flow (Vertical Timeline - Consistent with Consulting) */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: 2px solid var(--color-miraina-black);
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: calc(-2rem - 15px);
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-family: var(--font-mincho);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: var(--color-text-gray);
+}
+
+
+/* 5. FAQ */
+.bg-light-gray {
+    background-color: #fafafa;
+}
+
+.faq-clean-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-clean-item {
+    margin-bottom: 2rem;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.faq-q::before {
+    content: 'Q.';
+    margin-right: 0.5rem;
+    color: var(--color-miraina-black);
+}
+
+.faq-a {
+    padding-left: 1.5rem;
+    color: var(--color-text-gray);
+    line-height: 1.8;
+}
+
+/* 6. Large CTA */
+.section-cta-large {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.cta-head {
+    font-size: 3rem;
+    font-family: var(--font-gothic);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.cta-sub {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--color-text-gray);
+}
+
+.btn-black-fill {
+    background-color: var(--color-miraina-black);
+    color: var(--color-white);
+    border: none;
+    padding: 1.5rem 4rem;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-black-fill:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}

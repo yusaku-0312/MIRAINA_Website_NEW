@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Works Page Styles
+   ========================================================================== */
+
+/* 
+   Note: High-level styles for cards and pagination are in common.css
+   This file handles page-specific layout adjustments.
+*/
+
+/* Works Grid Layout */
+.works-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .works-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Ensure images fill container in grid context */
+.work-card {
+    height: 100%;
+}
+
+.section-works-list {
+    padding-bottom: var(--space-16);
+}

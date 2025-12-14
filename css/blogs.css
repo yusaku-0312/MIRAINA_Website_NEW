@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Blogs Page Styles
+   ========================================================================== */
+
+/* 
+   Note: High-level styles for cards and pagination are in common.css
+   This file handles page-specific layout adjustments.
+*/
+
+/* Blog Grid Layout */
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+.section-blog-list {
+    padding-bottom: var(--space-16);
+}

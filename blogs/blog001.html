@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法 | MIRAINAブログ</title>
+    <meta name="description"
+        content="AI開発の基本から実際の開発手順、ビジネスでの活用方法まで、初心者にもわかりやすく解説します。AI開発に興味がある個人の方から、事業でAI導入を検討している企業の担当者まで、幅広い読者に役立つ情報をお届けします。">
+    <!-- OGP Tags -->
+    <meta property="og:title" content="AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://miraina-ai.com/blogs/blog001.html">
+    <meta property="og:image" content="../images/blog_thum.jpg">
+    <meta property="og:description" content="AI開発の基本手順とビジネス活用方法を解説。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="../images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/blog_article.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="../index.html" class="header-logo">
+                <img src="../images/company-logo.webp" alt="MIRAINA" width="120" height="40">
+            </a>
+
+            <div class="hamburger" id="js-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="header-nav">
+                <div class="nav-item has-dropdown">
+                    <a href="../services.html" class="nav-link">サービス</a>
+                    <div class="dropdown-menu">
+                        <a href="../services/ai_consulting.html" class="dropdown-item">生成AI活用支援</a>
+                        <a href="../services/ai_training.html" class="dropdown-item">AI研修</a>
+                        <a href="../services/ai_develop.html" class="dropdown-item">AI開発</a>
+                        <a href="../services/llmo_insight.html" class="dropdown-item">LLMO Insight</a>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="../about.html" class="nav-link">MIRAINAについて</a></div>
+                <div class="nav-item"><a href="../works.html" class="nav-link">事例紹介</a></div>
+                <div class="nav-item"><a href="../blogs.html" class="nav-link">ブログ</a></div>
+                <div class="nav-item"><a href="../contact.html" class="nav-link btn-contact">お問い合わせ</a></div>
+                <div class="nav-item">
+                    <a href="../llms.txt" class="nav-link" aria-label="AI info">
+                        <svg class="icon-thin" width="20" height="20" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM7 8a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zM4 18h16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2z" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="js-mobile-menu">
+            <nav class="mobile-nav">
+                <div class="mobile-nav-item"><a href="../services.html" class="mobile-nav-link">サービス</a></div>
+                <div class="mobile-nav-item"><a href="../about.html" class="mobile-nav-link">MIRAINAについて</a></div>
+                <div class="mobile-nav-item"><a href="../works.html" class="mobile-nav-link">事例紹介</a></div>
+                <div class="mobile-nav-item"><a href="../blogs.html" class="mobile-nav-link">ブログ</a></div>
+                <div class="mobile-nav-item"><a href="../contact.html" class="mobile-nav-link">お問い合わせ</a></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <div class="container breadcrumbs">
+            <ul>
+                <li><a href="../index.html">ホーム</a></li>
+                <li><a href="../blogs.html">ブログ一覧</a></li>
+                <li>AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法</li>
+            </ul>
+        </div>
+
+        <article class="article-container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-date">2025.11.20</span>
+                    <div class="article-tags">
+                        <a href="#" class="article-tag">#AI開発</a>
+                        <a href="#" class="article-tag">#機械学習</a>
+                        <a href="#" class="article-tag">#初心者向け</a>
+                        <a href="#" class="article-tag">#ビジネス活用</a>
+                    </div>
+                </div>
+                <h1 class="article-title">AI開発とは？初心者でもわかる人工知能の作り方とビジネス活用法</h1>
+                <div class="article-thumbnail">
+                    <!-- Note: Using placeholder image for now -->
+                    <img src="../images/blog_thum.jpg" alt="AI開発のイメージ" width="800" height="450">
+                </div>
+            </header>
+
+            <!-- Summary -->
+            <section class="article-summary">
+                <h2 class="sr-only">記事の概要</h2>
+                <p>
+                    AI開発の基本から実際の開発手順、ビジネスでの活用方法まで、初心者にもわかりやすく解説します。
+                    AI開発に興味がある個人の方から、事業でAI導入を検討している企業の担当者まで、幅広い読者に役立つ情報をお届けします。
+                </p>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="article-toc">
+                <div class="toc-title">目次</div>
+                <ul>
+                    <li><a href="#section1">1. AIの開発とは？</a></li>
+                    <li><a href="#section2">2. AI開発の種類と手法</a></li>
+                    <li><a href="#section3">3. AI開発の流れと必要なスキル</a></li>
+                    <li><a href="#section4">4. AI開発におけるプログラミング言語</a></li>
+                    <li><a href="#section5">5. AI開発のビジネス活用事例</a></li>
+                    <li><a href="#section6">6. AI開発会社の選び方</a></li>
+                    <li><a href="#section7">7. AI開発の将来性とキャリア</a></li>
+                    <li><a href="#section8">8. まとめ</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content Body -->
+            <div class="article-body">
+
+                <h2 id="section1">1. AIの開発とは？</h2>
+                <p>
+                    AI開発とは、コンピューターが人間のように考えたり判断したりできるシステムを作ることです。
+                    大量のデータからパターンを学習し、新しい状況に対して適切な答えや行動を導き出すプログラムを開発します。
+                </p>
+
+                <h3>AIと機械学習の違い</h3>
+                <p>
+                    AIは人工知能全体を指す概念で、機械学習はその実現手法の一つです。
+                    機械学習では、データから自動的にルールを学習し、予測や分類を行います。
+                </p>
+
+                <h3>深層学習（ディープラーニング）とは</h3>
+                <p>
+                    深層学習は機械学習の発展形で、ニューラルネットワークを用いて画像認識や自然言語処理などの高度なタスクを高精度で実行します。
+                </p>
+
+                <h2 id="section2">2. AI開発の種類と手法</h2>
+                <p>
+                    AI開発には、目的やデータに応じて選択すべき複数の手法があります。
+                </p>
+
+                <!-- Comparison/Types Table -->
+                <div class="article-table-wrapper">
+                    <table class="article-table">
+                        <thead>
+                            <tr>
+                                <th>手法</th>
+                                <th>データの特徴</th>
+                                <th>主な用途</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>教師あり学習</th>
+                                <td>正解データあり</td>
+                                <td>画像分類、売上予測など</td>
+                            </tr>
+                            <tr>
+                                <th>教師なし学習</th>
+                                <td>正解データなし</td>
+                                <td>顧客セグメント、異常検知など</td>
+                            </tr>
+                            <tr>
+                                <th>強化学習</th>
+                                <td>試行錯誤で学習</td>
+                                <td>ゲームAI、ロボット制御など</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>教師あり学習</h3>
+                <p>正解ラベル付きデータを用いて学習し、分類や数値予測に用いられます。</p>
+
+                <h3>教師なし学習</h3>
+                <p>正解がないデータから、隠れた構造やパターンを見つけ出します。</p>
+
+                <h3>強化学習</h3>
+                <p>行動と結果を繰り返し評価しながら、最適な行動を学習します。</p>
+
+
+                <h2 id="section3">3. AI開発の流れと必要なスキル</h2>
+                <p>
+                    AI開発は以下のような段階的プロセスで進みます。
+                </p>
+
+                <!-- Process Flow Diagram -->
+                <div class="diagram-container">
+                    <ul class="diagram-process">
+                        <li class="process-step">
+                            <span class="step-num">Step 01</span>
+                            <span class="step-text">問題設定<br>要件定義</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 02</span>
+                            <span class="step-text">データ収集<br>前処理</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 03</span>
+                            <span class="step-text">モデル設計<br>学習</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 04</span>
+                            <span class="step-text">評価<br>改善</span>
+                        </li>
+                        <li class="process-step">
+                            <span class="step-num">Step 05</span>
+                            <span class="step-text">運用<br>メンテナンス</span>
+                        </li>
+                    </ul>
+                    <p class="diagram-caption">図1：AI開発の標準的なプロセス</p>
+                </div>
+
+                <h3>問題設定と要件定義</h3>
+                <p>解決したい課題と、達成指標を明確にします。</p>
+
+                <h3>データ収集と前処理</h3>
+                <p>欠損値処理、外れ値除去、データ形式の統一などを行います。</p>
+
+                <h3>モデル設計と学習</h3>
+                <p>アルゴリズム選定・学習・パラメータ調整を行います。</p>
+
+                <h3>評価と改善</h3>
+                <p>精度や実運用での効果を検証し、改善を繰り返します。</p>
+
+                <h3>運用とメンテナンス</h3>
+                <p>継続的な監視・モデル更新・性能維持を行います。</p>
+
+
+                <h2 id="section4">4. AI開発におけるプログラミング言語</h2>
+                <div class="content-grid-mini"
+                    style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-top: 2rem;">
+                    <div style="background: #fafafa; padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="margin-top:0;">Python</h4>
+                        <p style="margin-bottom:0; font-size: 0.9rem;">AI開発で最も広く使われている言語。学習コストが低く、豊富なライブラリが存在します。</p>
+                    </div>
+                    <div style="background: #fafafa; padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="margin-top:0;">R言語</h4>
+                        <p style="margin-bottom:0; font-size: 0.9rem;">統計解析・データ分析に強みを持つ言語。</p>
+                    </div>
+                    <div style="background: #fafafa; padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="margin-top:0;">Java</h4>
+                        <p style="margin-bottom:0; font-size: 0.9rem;">大規模・高信頼性が求められる商用システムで採用されやすい言語。</p>
+                    </div>
+                    <div style="background: #fafafa; padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="margin-top:0;">SQL</h4>
+                        <p style="margin-bottom:0; font-size: 0.9rem;">データ取得・前処理に不可欠なデータベース操作言語。</p>
+                    </div>
+                </div>
+
+                <h2 id="section5">5. AI開発のビジネス活用事例</h2>
+
+                <h3>主な業界別活用例</h3>
+                <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 2rem;">
+                    <li><strong>製造業</strong>：品質検査の自動化</li>
+                    <li><strong>金融</strong>：与信審査の高度化</li>
+                    <li><strong>小売</strong>：需要予測・在庫最適化</li>
+                    <li><strong>医療</strong>：画像診断支援</li>
+                </ul>
+
+                <h3>製造業での品質管理</h3>
+                <p>画像解析による検査自動化で精度と効率を向上。</p>
+
+                <h3>金融業界での与信審査</h3>
+                <p>大量データを用いた高精度な融資判断。</p>
+
+                <h3>小売業での需要予測</h3>
+                <p>売上・天候・イベント情報を活用した在庫最適化。</p>
+
+                <h3>医療分野での診断支援</h3>
+                <p>医療画像解析による病気の早期発見支援。</p>
+
+                <h2 id="section6">6. AI開発会社の選び方</h2>
+                <ul style="list-style: disc; padding-left: 1.5rem;">
+                    <li><strong>技術力と実績の確認</strong>：類似業界・課題への対応実績を確認。</li>
+                    <li><strong>開発体制とコミュニケーション</strong>：柔軟な対応力と進捗共有体制が重要。</li>
+                    <li><strong>運用・保守サポート</strong>：開発後の継続支援体制を確認。</li>
+                    <li><strong>費用対効果の検討</strong>：初期費用と運用費用を含めて総合評価。</li>
+                </ul>
+
+                <h2 id="section7">7. AI開発の将来性とキャリア</h2>
+                <div class="diagram-container">
+                    <p class="diagram-caption" style="margin-top:0; margin-bottom: 1rem;">成長するAI市場</p>
+                    <div class="diagram-comparison">
+                        <div class="comparison-item">
+                            <div class="comparison-header">AI業界の成長予測</div>
+                            <div class="comparison-content">
+                                <p style="padding: 1rem;">生成AIの普及により市場は拡大中。<br>今後も長期的な成長が見込まれます。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>求められるスキルセット</h3>
+                <p>プログラミング、数学、統計、ビジネス理解力。</p>
+
+                <h3>キャリアパスの多様性</h3>
+                <p>エンジニア、データサイエンティスト、コンサルタントなど。</p>
+
+                <h3>学習リソースと資格</h3>
+                <p>オンライン学習・資格・実践経験が重要。</p>
+
+                <h2 id="section8">8. まとめ</h2>
+                <p>
+                    AI開発は、データと技術を活用して価値を生み出す重要分野です。
+                    成功には、問題設定・データ品質・技術選択・継続改善が不可欠です。
+                </p>
+                <p>
+                    多くの業界で実用化が進み、今後も成長が期待されます。
+                    学習と実践を重ねることで、AI開発のプロフェッショナルとして活躍できます。
+                </p>
+
+                <!-- More Info -->
+                <div style="background-color: #f0f7ff; padding: 2rem; margin-top: 3rem; border-radius: 8px;">
+                    <h3 style="margin-top: 0; border: none; font-size: 1.3rem;">もっと知りたい方へ</h3>
+
+                    <h4 style="margin-top: 1rem;">AIツールについて知りたい方へ</h4>
+                    <p>目的別におすすめAIツールを比較・解説します。（<a href="#"
+                            style="text-decoration: underline; color: var(--color-intellect-blue);">ツール比較記事へ</a>）</p>
+
+                    <h4 style="margin-top: 1rem;">AI開発に関する研修を受けたい企業様へ</h4>
+                    <p>カスタマイズ型AI研修を提供しています。（<a href="../services/ai_training.html"
+                            style="text-decoration: underline; color: var(--color-intellect-blue);">AI研修サービスへ</a>）</p>
+                </div>
+
+            </div>
+
+            <!-- CTA Button -->
+            <div class="article-cta">
+                <div class="cta-box">
+                    <h3 class="cta-title">AI導入・開発でお悩みですか？</h3>
+                    <p class="cta-text">MIRAINAでは、貴社の課題に合わせた最適なAI活用・開発プランをご提案します。<br>まずはお気軽にご相談ください。</p>
+                    <a href="../contact.html" class="btn btn-black-fill">無料相談する</a>
+                </div>
+            </div>
+
+            <!-- Editorial Information -->
+            <div class="article-editor">
+                <div class="editor-header">この記事の監修者</div>
+                <div class="editor-profile">
+                    <div class="editor-image">
+                        <!-- Placeholder specific image -->
+                        <img src="../images/member_01.jpg" alt="芝 優作" width="800" height="800">
+                    </div>
+                    <div class="editor-info">
+                        <div class="editor-name">芝 優作 <span class="editor-role">MIRAINA 代表／生成AIコンサルタント</span></div>
+                        <p class="editor-desc">
+                            中小企業向けに、業務効率化・AI導入支援・研修・RAGチャットボット開発を提供。
+                            九州大学大学院でLLMに関する研究にも従事。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="article-related">
+                <h3 class="related-title">関連記事</h3>
+                <div class="related-grid">
+                    <a href="#" class="related-card">
+                        <div class="related-img">
+                            <img src="../images/blog_thum.jpg" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.10.15</div>
+                            <div class="related-text">生成AI導入の完全ガイド：成功へのロードマップ</div>
+                        </div>
+                    </a>
+                    <a href="#" class="related-card">
+                        <div class="related-img">
+                            <img src="../images/blog_thum.jpg" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.09.20</div>
+                            <div class="related-text">Pythonで始める機械学習入門</div>
+                        </div>
+                    </a>
+                    <a href="#" class="related-card">
+                        <div class="related-img">
+                            <img src="../images/blog_thum.jpg" alt="関連画像">
+                        </div>
+                        <div class="related-content">
+                            <div class="related-date">2025.09.05</div>
+                            <div class="related-text">失敗しないAI開発ベンダーの選び方</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <h2>MIRAINA</h2>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-menu-list">
+                    <li><a href="../about.html">私たちについて</a></li>
+                    <li><a href="../services.html">サービス</a></li>
+                    <li><a href="../works.html">事例紹介</a></li>
+                    <li><a href="../contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; MIRAINA All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('js-hamburger');
+            const mobileMenu = document.getElementById('js-mobile-menu');
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('is-active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

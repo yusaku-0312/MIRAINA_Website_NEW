@@ -442,3 +442,93 @@ img {
     stroke: currentColor;
     fill: none;
 }
+
+/* ==========================================================================
+   7. Common Components (FAQ, Breadcrumbs, etc.)
+   ========================================================================== */
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: var(--space-4) 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-gray);
+    margin-top: var(--header-height);
+    /* Ensure it's below fixed header */
+}
+
+.breadcrumbs ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.breadcrumbs li::after {
+    content: '>';
+    margin-left: 0.5rem;
+    color: #ccc;
+}
+
+.breadcrumbs li:last-child::after {
+    display: none;
+}
+
+.breadcrumbs a:hover {
+    color: var(--color-intellect-blue);
+    text-decoration: underline;
+}
+
+/* Page Hero (Generic) */
+.page-hero {
+    padding: var(--space-8) 0 var(--space-12);
+    text-align: center;
+}
+
+.page-hero-title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: 1rem;
+}
+
+.page-hero-desc {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-gray);
+}
+
+@media (min-width: 768px) {
+    .page-hero-title {
+        font-size: var(--font-size-4xl);
+    }
+}
+
+/* FAQ (Reusable) */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 2rem 0;
+}
+
+.faq-question {
+    font-size: var(--font-size-lg);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* Q icon pseudo-element */
+.faq-question::before {
+    content: 'Q.';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--font-mincho);
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding-left: 2rem;
+    color: var(--color-text-gray);
+}

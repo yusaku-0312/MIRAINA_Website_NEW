@@ -263,40 +263,7 @@
     line-height: 1.8;
 }
 
-/* ==========================================================================
-   5. FAQ Section
-   ========================================================================== */
-.faq-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
-.faq-item {
-    border-bottom: 1px solid #ddd;
-    padding: 2rem 0;
-}
-
-.faq-question {
-    font-size: var(--font-size-lg);
-    margin-bottom: 1rem;
-    position: relative;
-    padding-left: 2rem;
-}
-
-/* Q icon pseudo-element */
-.faq-question::before {
-    content: 'Q.';
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-family: var(--font-mincho);
-    font-weight: bold;
-}
-
-.faq-answer {
-    padding-left: 2rem;
-    color: var(--color-text-gray);
-}
 
 /* ==========================================================================
    6. Contact Section

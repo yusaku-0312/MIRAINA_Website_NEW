@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   1. Service Intro & Summary Grid
+   ========================================================================== */
+.service-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.service-intro p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-gray);
+    line-height: 2;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+/* Summary Grid */
+.service-summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .service-summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-summary-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.service-summary-card {
+    display: block;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-normal);
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-intellect-blue);
+}
+
+.service-summary-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.service-summary-card p {
+    font-size: var(--font-size-sm);
+    color: #666;
+    flex-grow: 1;
+}
+
+.service-summary-card .arrow {
+    display: block;
+    text-align: right;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transition: transform var(--transition-fast);
+}
+
+.service-summary-card:hover .arrow {
+    transform: translateX(5px);
+    color: var(--color-intellect-blue);
+}
+
+/* ==========================================================================
+   2. Service Detail Sections
+   ========================================================================== */
+.bg-paper {
+    background-color: #fff;
+    /* Flip background for contrast if main body is paper-gray */
+}
+
+/* Note: body is paper-gray, so bg-paper usually refers to the paper color, 
+   but for sections we want variation. Let's make "bg-paper" match default body 
+   and have white sections be distinct if needed. Or keep simple. */
+
+/* Actually, design system says "Paper Gray" is base. So we want white sections to pop. */
+.service-detail-section:nth-child(even) {
+    background-color: var(--color-white);
+}
+
+.service-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 960px) {
+    .service-detail-container {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .service-detail-container.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.service-detail-content {
+    flex: 1;
+}
+
+.service-detail-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.service-detail-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 1px;
+    background-color: var(--color-miraina-black);
+}
+
+.service-detail-desc {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--color-text-gray);
+}
+
+.service-feature-list {
+    margin-bottom: 2.5rem;
+    border-top: 1px solid #ddd;
+}
+
+.service-feature-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ddd;
+    font-size: var(--font-size-base);
+    display: flex;
+    align-items: center;
+}
+
+.service-feature-list li::before {
+    content: '・';
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.service-detail-image {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+}
+
+.service-detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
